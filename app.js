@@ -56,6 +56,7 @@ function modalPopUp(randInt) {
             let pp = document.createElement('p');
             name_div.append(pp);
             pp.innerHTML = i+1 + ". " + names[i];
+            p_tag.innerHTML = `Click to start Randomizing a number!`;
         }
         
     })
