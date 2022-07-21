@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.head {
+    width: 100%;
+    height: 15vh;
+    color: black;
+    display: grid;
+    place-items: center;
+    border: 5px solid black;
+}
+
+.content {
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        'form number'
+        'names names';
+    gap: 20px;
+}
+
+.form-content {
+    grid-area: form;
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content form > label {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+}
+
+.form-content form > input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.form-content form > button {
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(109, 235, 109);
+    transition: .3s ease;
+}
+
+.form-content form > button:hover {
+    background: black;
+    color: white;
+}
+
+.number-randomizer-content {
+    grid-area: number;
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.number-randomizer-content > p {
+    font-size: 50px;
+    margin: 20px 0;
+    color: white;
+}
+
+.number-randomizer-content > button {
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(109, 235, 109);
+    transition: .3s ease;
+}
+
+.number-randomizer-content > button:hover {
+    background: black;
+    color: white;
+}
+
+.name-area-content {
+    background: yellow;
+    grid-area: names;
+}
+
+.name-area-content > p {
+    display: inline-block;
+    background: blue;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    font-size: 22px;
+    border-radius: 5px;
+}
+
+.name-area-content > p:nth-child(even) {
+    background: red;
+    color: white;
+}
+
+.modal-bg {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 200px;
+}
+
+.modal-bg.active {
+    display: flex;
+}
+
+.modal-bg .modal-box {
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+    background: rgb(25, 145, 69);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-bg .modal-box > p {
+    font-size: 35px;
+}
+
+.modal-bg .modal-box > button {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color:rgb(5, 78, 112);
+    cursor: pointer;
+    color: white;
+}

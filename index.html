@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Simple Name Randomizer</title>
+</head>
+<body>
+    <div class="head">
+        <h1>Simple Name Randomizer</h1>
+    </div>
+
+    <div class="modal-bg">
+        <div class="modal-box">
+            <p id="winner-text">The Winner is 1. Justine</p>
+            <button id="confirmBtn">Confirm</button>
+        </div>
+    </div>
+
+
+    <section class="content">
+        <div class="form-content">
+            <form onclick="event.preventDefault()">
+                <label for="">Add Names</label>
+                <input type="text" id="name">
+                <button type="submit" id="btnAdd">Add</button>
+            </form>
+        </div>
+        <div class="number-randomizer-content">
+            <p id="rand-num-container">1</p>
+            <button id="rand-num-button">Randomize Number</button>
+        </div>
+        <div class="name-area-content">
+        </div>
+    </section>
+
+    
+
+</body>
+</html>
